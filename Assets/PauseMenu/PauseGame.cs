@@ -22,6 +22,7 @@ public class PauseGame : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
             {
                 PauseTheGame();
+                GameObject.FindGameObjectsWithTag("music")[0].GetComponent<GameManager>().SetMute();
             }
         }
     }
